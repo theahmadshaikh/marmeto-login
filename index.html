@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+ <div class="container">
+    <div class="login-container">
+        <img src="./assests/Image.png" alt="image">
+        <h1>OTP Verification</h1>
+        <p>Enter email and phone number to send one time Password</p>
+        <form action="" id="login-form">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <img src="./assests/Edit icon.png" alt="edit">
+                <p id="email-error" class="hidden">Please enter valid email</p>
+            </div>
+            <div>
+                <label for="phone-number">Phone Number</label>
+                <input type="number" name="phone-number" id="phone-number" required>
+                <p id="phone-number-error" class="hidden">Please enter valid Phone Number</p>
+            </div>
+            <input type="submit" value="Continue">
+        </form>
+    </div>
+    <div class="otp-container hidden">
+        <div class="back-btn">
+            <img class="line-5" src="./assests/Line 5.png" alt="back-btn">
+            <img class="line-4" src="./assests/Line 4.png" alt="back-btn">
+            <img class="line-6" src="./assests/Line 6.png" alt="back-btn">
+        </div>
+        <div>
+            <h1>Verification Code</h1>
+            <p>We have sent the verification code to your email address</p>
+        </div>
+        <div class="otp-btns">
+            <input type="number" name="digit1" id="digit1" maxlength="1">
+            <input type="number" name="digit2" id="digit2" maxlength="1">
+            <input type="number" name="digit3" id="digit3" maxlength="1">
+            <input type="number" name="digit4" id="digit4" maxlength="1">
+        </div>
+        <button id="confirm-btn">
+            Confirm
+        </button>
+    </div>
+    <div class="main-page hidden">
+        <div>
+            <img src="./assests/Group 11.png" alt="">
+        </div>
+        <div>
+            <h1 id="user-name">Hey {USER}!</h1>
+            <p>Congratulations! You have been successfully authenticated</p>
+        </div>
+        <div>
+            <button>
+                Done
+            </button>
+        </div>
+    </div>
+ </div>
+</body>
+<script src="./scripts/script.js"></script>
+</html>
