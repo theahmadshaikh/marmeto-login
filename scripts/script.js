@@ -8,6 +8,7 @@ const emailError = document.querySelector("#email-error")
 const phoneNumberError = document.querySelector("#phone-number-error")
 const confirmButton = document.querySelector("#confirm-btn")
 const backBtn = document.querySelector(".back-btn");
+const editButton = document.querySelector("#edit-button");
 const userNameElement = document.querySelector("#user-name")
 let userName ="User";
 
@@ -86,7 +87,9 @@ window.addEventListener("DOMContentLoaded",()=>{
     otpContainer.classList.toggle("hidden")
         })
 
-     
-    
+        console.log(editButton)
+        editButton.addEventListener("click",(e)=>{
+            email.focus();
+        })
 })
 
