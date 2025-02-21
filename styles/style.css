@@ -12,7 +12,7 @@
     flex-direction: column;
     place-items: center;
     gap: 2rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 }
 .login-container p{
     color: #B6B6B6;
