@@ -10,6 +10,7 @@ const confirmButton = document.querySelector("#confirm-btn")
 const backBtn = document.querySelector(".back-btn");
 const editButton = document.querySelector("#edit-button");
 const userNameElement = document.querySelector("#user-name")
+const otpError = document.querySelector(".otp-error")
 let userName ="User";
 
 
@@ -38,7 +39,7 @@ const handelSubmitOtp = (e)=>{
     const digit4 = document.querySelector("#digit4")
     const otp = digit1.value+digit2.value+digit3.value+digit4.value;
     if(otp!=="2025")
-       return alert("Please enter valid otp");
+       return otpError.classList.toggle("hidden")
     otpContainer.classList.toggle("hidden")
     mainPage.classList.toggle("hidden")
     userNameElement.textContent = `Hey ${userName}!`
@@ -87,7 +88,6 @@ window.addEventListener("DOMContentLoaded",()=>{
     otpContainer.classList.toggle("hidden")
         })
 
-        console.log(editButton)
         editButton.addEventListener("click",(e)=>{
             email.focus();
         })
