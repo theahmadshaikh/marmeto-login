@@ -65,10 +65,28 @@ window.addEventListener("DOMContentLoaded",()=>{
                     inputs[index - 1].focus(); 
                 }
             });
+            input.addEventListener("paste", function (event) {
+                event.preventDefault();
+                console.log("hi")
+                let pastedData = (event.clipboardData ).getData("text");
+                let digits = pastedData.replace(/\D/g, "").split(""); 
+                if(!digits.length)
+                    return ;
+    
+                if (digits.length <= inputs.length) {
+                    inputs.forEach((inp, i) => {
+                        inp.value = digits[i] || ""; 
+                    });
+                    inputs[Math.min(digits.length, inputs.length) - 1].focus(); 
+                }
+            });
         });
         backBtn.addEventListener("click",()=>{
             loginContainer.classList.toggle("hidden")
     otpContainer.classList.toggle("hidden")
         })
+
+     
     
 })
+
